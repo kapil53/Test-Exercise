@@ -11,10 +11,10 @@ def totalPayout(numberOfPlays: Int, total: Int = 0): Int = {
 
 //Solution for 2.c
 //Used the simple average calculation of averagePayoutPerGame = totalPayout for all plays per game divide by number of plays per game
-def averagePayout(numberOfGames: Int, playsPerGame: Int, averagePayoutsPerGame: List[Int] = List.empty): Double = {
-  var averagePerGame = 0
+def averagePayout(numberOfGames: Int, playsPerGame: Int, averagePayoutPerGame: List[Double] = List.empty): Double = {
+  val averagePerGame: Double = totalPayout(playsPerGame) / playsPerGame
   if(numberOfGames > 0)
-    averagePayout(numberOfGames - 1, playsPerGame, averagePayoutsPerGame :+ averagePerGame)
+    averagePayout(numberOfGames - 1, playsPerGame, averagePayoutPerGame :+ averagePerGame)
   else
-    totalPayout(playsPerGame) / playsPerGame
+   averagePayoutPerGame
 }
