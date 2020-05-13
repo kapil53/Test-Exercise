@@ -12,7 +12,7 @@ def generateCollectionOfInts(index: Int, result: List[Int] = List.empty[Int]): L
 }
 
 //Solution for 1.c
-def repeatCallOfGenerate() = {
+def repeatCallOfGenerateWithRatio() = {
   val (ones, twos) = Seq.fill(1000)(generateCollectionOfInts(50))
     .flatten.toList.partition(_ == 1)
 
