@@ -1,3 +1,5 @@
+import java.util.concurrent.ThreadLocalRandom
+
 //Solution for 1.a
 def random = ThreadLocalRandom.current.nextInt(1, 3)
 
